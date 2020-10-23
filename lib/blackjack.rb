@@ -28,6 +28,11 @@ def initial_round
   player_hand = 2.times.collect {deal_card}
   display_card_total(player_hand.sum)
   player_hand.sum
+  x = deal_card
+  y = deal_card
+  return x + y
+  display_card_total(x + y)
+
 end
 
 def invalid_command
@@ -55,6 +60,11 @@ end
 #####################################################
 
 def runner
-  # code runner here
+  welcome
+  total = initial_round
+  while total < 21
+    card_total = hit?(total)
+  end
+  end_game(card_total)
 end
     
